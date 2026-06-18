@@ -25,9 +25,10 @@ class TiketRegular extends Tiket
         return $this->lokasiBaris;
     }
 
+    // Overriding
     public function hitungTotalHarga()
     {
-        return $this->hargaDasarTiket;
+        return $this->jumlah_kursi * $this->hargaDasarTiket;
     }
 
     public function tampilkanInfoFasilitas()
