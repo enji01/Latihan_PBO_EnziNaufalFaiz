@@ -2,14 +2,12 @@
 
 abstract class Tiket
 {
-    // Properti terenkripsi (encapsulation)
     protected $id_tiket;
     protected $nama_film;
     protected $jadwal_tayang;
     protected $jumlah_kursi;
     protected $hargaDasarTiket;
 
-    // Constructor untuk memetakan data dari database
     public function __construct($data)
     {
         $this->id_tiket = $data['id_tiket'];
@@ -45,7 +43,6 @@ abstract class Tiket
         return $this->hargaDasarTiket;
     }
 
-    // Method abstrak
     abstract public function hitungTotalHarga();
 
     abstract public function tampilkanInfoFasilitas();
